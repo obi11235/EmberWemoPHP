@@ -4,7 +4,7 @@
 	require_once('/var/www/ember/system/include/common.inc.php');
 	#Debug::enable();
 	
-	$ip = '192.168.1.113';
+	$ip = Site::getSetting('wemo_ip'); 
 	
 	$switch = new WeMo_Switch($ip);
 
