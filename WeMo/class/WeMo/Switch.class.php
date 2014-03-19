@@ -67,6 +67,14 @@ class WeMo_Switch
 		$this->ch = $ch;
 	}
 	
+	public function closeConnection()
+	{
+		if(is_null($this->ch));
+			return;
+		curl_close($this->ch);
+		$this->ch = null;
+	}
+
 	private function _parseState($response)
 	{
 		if(!isset($response) || $response == '')
