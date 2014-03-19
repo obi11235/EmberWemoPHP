@@ -142,7 +142,12 @@ class WeMo_Switch
 	
 	function flipSwitch()
 	{
-		
+		$current = $this->getState();
+		switch($current)
+		{
+			case self::ON: $this->setState(self::OFF); break;
+			case self::OFF: $this->setState(self::ON); break;
+		}
 	}
 	
 	function switchChanged()
