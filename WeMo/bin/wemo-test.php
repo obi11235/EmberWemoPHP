@@ -1,6 +1,7 @@
 <?php
 
 	define('EXCEPTION_LOG_FILE', 'error_log');
+	$_SERVER['SERVER_NAME'] = 'home.emberframework.com';
 	require_once('/var/www/ember/system/include/common.inc.php');
 	#Debug::enable();
 	
